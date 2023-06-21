@@ -66,6 +66,19 @@ public class MoveZeroAtLast {
         }
     }
 
+    // Optimised Solution 
+    public void moveZeroes(int[] nums) {
+        int i = 0;
+        for (int j = 0; j < nums.length; j++) {
+            if (nums[j] != 0) {
+                int temp = nums[i];
+                nums[i] = nums[j];
+                nums[j] = temp;
+                i++;
+            }
+        }
+    }
+
     public static void main(String[] args) {
         MoveZeroAtLast m = new MoveZeroAtLast();
         int[] arr = {0,2,0,0,5};
